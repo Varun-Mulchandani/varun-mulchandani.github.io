@@ -2,19 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Varun Mulchandani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Change the family in this line to try a different font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fdfbf6; /* soft cream-white */
+      --text: #222;
+      --accent: #4c6ef5;
+      /* Set your base font stack here */
+      --base-font: 'Georgia', serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--base-font);
+      background: var(--cream);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .wrapper {
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    /* ───────────────────────── left column */
+    .sidebar {
+      flex: 0 0 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px; /* adjust radius for softer or sharper corners */
+    }
+
+    .sidebar h1 {
+      margin: 1rem 0 0.5rem 0;
+      font-size: 1.75rem;
+    }
+
+    .nav-links {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: gray;
+      font-weight: 500;
+    }
+
+    /* ───────────────────────── main column */
+    .content {
+      flex: 1 1 300px;
+    }
+
+    .spotlight {
+      color: maroon;
+      /* …rest of styling… */
+    }
+
+    a {
+      color: gray;
+    }
+
+    p.lead {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
-  <main>
-    <p>This is my personal website hosted on GitHub Pages.</p>
-  </main>
-  <footer>
-    <p>&copy; 2025 My Name</p>
-  </footer>
+
+  <div class="wrapper">
+
+    <!-- ──────────────── Sidebar -->
+    <aside class="sidebar">
+      <img src="Downloads/IMG_1383.png" alt="Profile photo of Varun Mulchandani">
+      <h1>Varun Mulchandani</h1>
+      <div class="nav-links">
+        <a href="https://scholar.google.com/citations?user=J-v4RNwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/Varun-Mulchandani" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:vmmulcha@ncsu.edu">Email</a>
+        <a href=".pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </aside>
+
+    <!-- ──────────────── Main content -->
+    <main class="content">
+      <p class="lead">
+        I am a Ph.D. student at NC State, advised by <a href="https://jungeunkim.wordpress.ncsu.edu/" target="_blank" rel="noopener"> Dr. Jung-Eun Kim</a>. I work in the broad areas of out-of-distribution generalization, reasoning, and efficiency - sometimes at their intersection.
+      </p>
+
+      <h2>Research</h2>
+      <p>
+        <strong>Severing Spurious Correlations with Data Pruning</strong><br>
+        International Conference on Learning Representations (ICLR), 2025 · <span class="spotlight">Spotlight (&lt;5%/11,672)</span><br>
+        Varun Mulchandani &amp; Jung-Eun Kim&nbsp;<br>
+        <a href="https://openreview.net/pdf?id=Bk13Qfu8Ru" target="_blank" rel="noopener">paper</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/JEKimLab/ICLR2025_SpuriousDataPruning" target="_blank" rel="noopener">code</a>
+      </p>
+
+    </main>
+
+  </div>
 </body>
 </html>
